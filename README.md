@@ -32,7 +32,6 @@ The following linux tools are installed:
   - **tar** - archive utility
   - **gzip** - compression tool
   - **bzip2** - compression tool
-  - **xz-utils** - compression tool
   - **python3** - python interpreter for additional scripts
 
 Additionally, the following packages are locally installed:

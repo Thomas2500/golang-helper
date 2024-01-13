@@ -2,7 +2,7 @@
 ARG GO_VERSION=alpine
 FROM golang:${GO_VERSION}
 
-RUN apk --no-cache upgrade && apk --no-cache add rsync openssh-client git wget curl coreutils bash brotli ca-certificates dpkg sed grep findutils tar gzip bzip2 xz-utils python3
+RUN apk --no-cache upgrade && apk --no-cache add rsync openssh-client git wget curl coreutils bash brotli ca-certificates dpkg sed grep findutils tar gzip bzip2 python3
 
 # Provide git-tools package from upstream
 RUN git clone https://github.com/MestreLion/git-tools.git /opt/git-tools
