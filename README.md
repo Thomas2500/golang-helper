@@ -1,25 +1,43 @@
 # golang-helper
 
-This is a general helper image for CI/CD pipelines. It's based on the official golang latest image and contains some additional linux packages and tools.
-Every two weeks this image is automatically rebuild to provide the latest available version.
+This is a general helper image for CI/CD pipelines. It's based on the official golang image and contains some additional packages and tools.
+Every two weeks this image is automatically rebuild to provide up-to-date packages and tools.
 
 This image is available on [Docker Hub](https://hub.docker.com/r/thomas2500/golang-helper).
 
-Please note that this image always sticks to the latest **golang:alpine** version.\
-If you need a specific version, please create an issue or a pull request.
+The following tags are available:
+  - **latest** - latest Go version
+  - **1.21** - Go 1.21.X
+  - **1.20** - Go 1.20.X
+
+This replository only keeps supported versions of Go.
 
 ## Tools
 ### Linux Tools
 
 The following linux tools are installed:
- - **rsync** - syncing files with remote target
- - **openssh-client** - deploy files to remote target using SSH
- - **git** - repository management
- - **wget** - download files
- - **curl** - perform extended HTTP requests, addition to wget
- - **coreutils** - basic linux tools
- - **bash** - shell for executing scripts
- - **brotli** - compression tool to precompress files to be served by nginx
+  - **rsync** - syncing files with remote target
+  - **openssh-client** - deploy files to remote target using SSH
+  - **git** - repository management
+  - **wget** - download files
+  - **curl** - perform extended HTTP requests, addition to wget
+  - **coreutils** - basic linux tools
+  - **bash** - shell for executing scripts
+  - **brotli** - compression tool to precompress files to be served by nginx
+  - **ca-certificates** - certificates for HTTPS requests
+  - **dpkg** - package management for debian based systems
+  - **sed** - text manipulation
+  - **grep** - text manipulation
+  - **findutils** - directory searching utilities
+  - **tar** - archive utility
+  - **gzip** - compression tool
+  - **bzip2** - compression tool
+  - **xz-utils** - compression tool
+  - **python3** - python interpreter for additional scripts
+
+Additionally, the following packages are locally installed:
+  - **git-tools** - assorted git-related scripts and tools
+  - **golangci-lint** - linter for Go source code
 
 ## Example usage
 
