@@ -8,23 +8,23 @@ on:
     - cron: '5 0 */15 * *'
   workflow_dispatch:
 
-# Build docker image for golang latest, 1.23, 1.22, 1.21
+# Build docker image for golang latest, 1.24, 1.23, 1.22
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        GO_VERSION: ["alpine", "1.23-alpine", "1.22-alpine", "1.21-alpine"]
+        GO_VERSION: ["alpine", "1.24-alpine", "1.23-alpine", "1.22-alpine"]
         include:
           - GO_VERSION: "alpine"
             output_image: "thomas2500/golang-helper:latest"
+          - GO_VERSION: "1.24-alpine"
+            output_image: "thomas2500/golang-helper:1.24"
           - GO_VERSION: "1.23-alpine"
             output_image: "thomas2500/golang-helper:1.23"
           - GO_VERSION: "1.22-alpine"
             output_image: "thomas2500/golang-helper:1.22"
-          - GO_VERSION: "1.21-alpine"
-            output_image: "thomas2500/golang-helper:1.21"
     name: Build golang-helper Image
     steps:
       - name: Checkout code
