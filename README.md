@@ -7,9 +7,9 @@ This image is available on [Docker Hub](https://hub.docker.com/r/thomas2500/gola
 
 The following tags are available:
   - **latest** - latest Go version
+  - **1.26** - Go 1.26.X
+  - **1.25** - Go 1.25.X
   - **1.24** - Go 1.24.X
-  - **1.23** - Go 1.23.X
-  - **1.22** - Go 1.22.X
 
 This replository only keeps supported versions of Go.
 
@@ -33,6 +33,7 @@ The following linux tools are installed:
   - **tar** - archive utility
   - **gzip** - compression tool
   - **bzip2** - compression tool
+  - **zstd** - compression tool
   - **python3** - python interpreter for additional scripts
 
 Additionally, the following packages are locally installed:
