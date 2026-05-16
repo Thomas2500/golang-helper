@@ -9,5 +9,5 @@ RUN git clone https://github.com/MestreLion/git-tools.git /opt/git-tools
 ENV PATH="${PATH}:/opt/git-tools"
 
 # Install golangci-lint
-RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s && \
+RUN wget -O- -nv https://golangci-lint.run/install.sh | sh -s latest && \
 	golangci-lint --version
