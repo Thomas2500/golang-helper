@@ -7,9 +7,9 @@ This image is available on [Docker Hub](https://hub.docker.com/r/thomas2500/gola
 
 The following tags are available:
   - **latest** - latest Go version
+  - **1.27** - Go 1.27.X
   - **1.26** - Go 1.26.X
   - **1.25** - Go 1.25.X
-  - **1.24** - Go 1.24.X
 
 This replository only keeps supported versions of Go.
 
